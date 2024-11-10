@@ -1,0 +1,14 @@
+{
+    "supervisor_prompt_json": {
+        "type": "template",
+        "content": ""
+    },
+    "supervisor_examples_json": {
+        "type": "raw",
+        "content": ""
+    },
+    "supervise_header": {
+        "type": "raw",
+        "content": ""
+    }
+}

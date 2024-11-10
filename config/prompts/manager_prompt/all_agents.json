@@ -1,0 +1,22 @@
+{
+  "manager_thought_prompt": {
+    "type": "template",
+    "content": ""
+  },
+  "manager_action_prompt": {
+    "type": "template",
+    "content": ""
+  },
+  "hint": {
+    "type": "raw",
+    "content": "This is the final step. You should use Finish Action to finish the task."
+  },
+  "valid_thought_example": {
+    "type": "raw",
+    "content": ""
+  },
+  "valid_action_example": {
+    "type": "raw",
+    "content": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "analyst_prompt": {
+        "type": "template",
+        "content": ""
+    },
+    "analyst_fewshot": {
+        "type": "raw",
+        "content": ""
+    }
+}

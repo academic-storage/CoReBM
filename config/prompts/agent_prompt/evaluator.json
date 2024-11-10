@@ -1,0 +1,10 @@
+{
+    "evaluator_prompt": {
+        "type": "template",
+        "content": ""
+    },
+    "evaluator_fewshot": {
+        "type": "raw",
+        "content": ""
+    }
+}

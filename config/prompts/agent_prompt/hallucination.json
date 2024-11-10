@@ -1,0 +1,22 @@
+{
+    "hallucination_analyse_prompt_json": {
+        "type": "template",
+        "content": ""
+    },
+    "hallucination_evaluate_prompt_json": {
+        "type": "template",
+        "content": ""
+    },
+    "hallucination_retrieve_prompt_json": {
+        "type": "template",
+        "content": ""
+    },
+    "hallucination_examples": {
+        "type": "raw",
+        "content": ""
+    },
+    "hallucination_examples_json": {
+        "type": "raw",
+        "content": ""
+    }
+}

@@ -1,0 +1,33 @@
+# Python bytecode
+*.pyc
+
+# Logs
+*.log
+nohup.out
+
+# Virtualenv
+venv/
+
+# Build
+build/
+dist/
+__pycache__/
+
+# IDE
+.vscode/
+.idea/
+
+# MacOS
+.DS_Store
+
+# Others
+data/
+logs/
+run/
+results/
+config/api-config.json
+test*
+!corebm/*/test*
+
+wandb/
+trlx/

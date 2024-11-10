@@ -1,0 +1,1 @@
+from corebm.pages.demo import demo
