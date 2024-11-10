@@ -21,13 +21,13 @@ __pycache__/
 .DS_Store
 
 # Others
-data/
-logs/
-run/
-results/
-config/api-config.json
-test*
-!corebm/*/test*
+Implementation/data/
+Implementation/logs/
+Implementation/run/
+Implementation/results/
+Implementation/config/api-config.json
+Implementation/test*
+!Implementation/corebm/*/test*
 
 wandb/
 trlx/
