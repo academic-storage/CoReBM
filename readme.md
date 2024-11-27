@@ -1,7 +1,9 @@
-# CoReBM: A Code Reviewer Recommendation Method
+# CoReBM
 
 ## Introduction
-This document is included in 'Building Bridges, Not Walls: Fairness-aware and Accurate Recommendation of Code Reviewers via LLM-based Agents Collaboration'. We first collected a dataset from 4 large-scale open-source projects involving 50-month revision history, reaching up to 30 attributes. This dataset includes gender and racial/ethnic information, which was inferred, validated, and incorporated to enable comprehensive data bias analysis in reviewer recommendation tasks. Additionally, we introduce a fairness-aware and accurate approach: CoReBM, which integrates diverse factors to improve recommendation performance while mitigating bias effects through the incorporation of candidates' gender and racial/ethnic attributes.
+This repository is divided into three parts: **Comparison**, **Dataset** and **Implementation**. 
+
+**Note**: Detailed introduction can be found in the [Introduction] section of our paper, which is currently under review. Stay tuned!
 
 ## General of Packages
 /Comparison: Comparative experiment.  
