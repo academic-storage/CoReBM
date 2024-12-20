@@ -1,8 +1,8 @@
 from loguru import logger
 from langchain.prompts import PromptTemplate
 
-from Implementation.corebm.agents.base import Agent
-from Implementation.corebm import format_step, read_json
+from corebm.agents.base import Agent
+from corebm.utils import format_step, read_json
 
 
 class Explainer(Agent):

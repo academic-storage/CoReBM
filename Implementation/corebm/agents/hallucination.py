@@ -1,8 +1,8 @@
 from loguru import logger
 from langchain.prompts import PromptTemplate
 
-from Implementation.corebm.agents.base import Agent
-from Implementation.corebm import format_step, read_json
+from corebm.agents.base import Agent
+from corebm.utils import format_step, read_json
 
 
 class Hallucination(Agent):
@@ -28,10 +28,6 @@ class Hallucination(Agent):
         return self.prompts['hallucination_evaluate_prompt_json']
 
     @property
-    def hallucination_retrieve_prompt(self) -> PromptTemplate:
-        return self.prompts['hallucination_retrieve_prompt_json']
-
-    @property
     def hallucination_examples(self) -> str:
         prompt_name = 'hallucination_examples_json' if self.json_mode else 'hallucination_examples'
         if prompt_name in self.prompts:
@@ -47,11 +43,6 @@ class Hallucination(Agent):
             )
         if prompt == 'evaluate':
             return self.hallucination_evaluate_prompt.format(
-                examples=self.hallucination_examples,
-                **kwargs
-            )
-        if prompt == 'retrieve':
-            return self.hallucination_retrieve_prompt.format(
                 examples=self.hallucination_examples,
                 **kwargs
             )

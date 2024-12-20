@@ -5,9 +5,9 @@ from typing import Any
 from loguru import logger
 from argparse import ArgumentParser
 
-from Implementation.corebm import GenerationTask
-from Implementation.corebm import str2list, NumpyEncoder
-from Implementation.corebm import MetricDict, HitRatioAt, NDCGAt
+from corebm.tasks.generation import GenerationTask
+from corebm.utils import str2list, NumpyEncoder
+from corebm.evaluation import MetricDict, HitRatioAt, NDCGAt
 
 class EvaluateTask(GenerationTask):
     @staticmethod

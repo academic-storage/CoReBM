@@ -2,8 +2,8 @@ import os
 import pandas as pd
 import streamlit as st
 
-from Implementation.corebm import System
-from Implementation.corebm import add_chat_message
+from corebm.systems import System
+from corebm.utils import add_chat_message
 
 @st.cache_data
 def read_data(file_path: str):

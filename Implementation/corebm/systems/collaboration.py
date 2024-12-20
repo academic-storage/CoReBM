@@ -3,9 +3,9 @@ import streamlit as st
 from typing import Any, Optional
 from loguru import logger
 
-from Implementation.corebm import System
-from Implementation.corebm import Agent, Manager, Analyst, Evaluator, Supervisor, Hallucination, Explainer
-from Implementation.corebm import parse_answer, parse_action, format_chat_history, parse_json
+from corebm.systems.base import System
+from corebm.agents import Agent, Manager, Analyst, Evaluator, Supervisor, Hallucination, Explainer
+from corebm.utils import parse_answer, parse_action, format_chat_history, parse_json
 
 class CollaborationSystem(System):
     @staticmethod

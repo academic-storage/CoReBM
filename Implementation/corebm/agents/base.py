@@ -4,12 +4,12 @@ from loguru import logger
 from typing import Any, Optional, TYPE_CHECKING
 from langchain.prompts import PromptTemplate
 
-from Implementation.corebm import BaseLLM, AnyOpenAILLM, OpenSourceLLM
-from Implementation.corebm import TOOL_MAP, Tool
-from Implementation.corebm import run_once, format_history, read_prompts
+from corebm.llms import BaseLLM, AnyOpenAILLM, OpenSourceLLM
+from corebm.tools import TOOL_MAP, Tool
+from corebm.utils import run_once, format_history, read_prompts
 
 if TYPE_CHECKING:
-    pass
+    from corebm.systems import System
 
 class Agent(ABC):
     """

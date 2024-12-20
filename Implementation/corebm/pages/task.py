@@ -2,8 +2,9 @@ import os
 import streamlit as st
 from loguru import logger
 
-from Implementation.corebm import task2name, read_json
-from Implementation.corebm.pages import gen_page
+from corebm.systems import *
+from corebm.utils import task2name, read_json
+from corebm.pages.generation import gen_page
 
 def scan_list(config: list) -> bool:
     for i, item in enumerate(config):

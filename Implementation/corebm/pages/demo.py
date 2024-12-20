@@ -1,14 +1,14 @@
 import os
 import streamlit as st
 
-from Implementation.corebm.pages import task_config
-from Implementation.corebm import *
-from Implementation.corebm import init_openai_api, read_json
+from corebm.pages.task import task_config
+from corebm.systems import *
+from corebm.utils import init_openai_api, read_json
 
 def demo():
     init_openai_api(read_json('config/api-config.json'))
     st.set_page_config(
-        page_title="PR",
+        page_title="CoReBM",
         page_icon="📄",
         layout="wide",
     )

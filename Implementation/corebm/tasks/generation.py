@@ -6,9 +6,9 @@ from typing import Any
 from loguru import logger
 from argparse import ArgumentParser
 
-from Implementation.corebm import Task
-from Implementation.corebm import init_openai_api, read_json
-from Implementation.corebm import CollaborationSystem
+from corebm.tasks.base import Task
+from corebm.utils import init_openai_api, read_json
+from corebm.systems import CollaborationSystem
 
 class GenerationTask(Task):
     @staticmethod

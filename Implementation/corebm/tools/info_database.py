@@ -1,6 +1,6 @@
 import pandas as pd
 
-from Implementation.corebm import Tool
+from corebm.tools.base import Tool
 
 class InfoDatabase(Tool):
     def __init__(self, *args, **kwargs) -> None:

@@ -1,1 +1,1 @@
-from Implementation.corebm.pages import demo
+from corebm.pages.demo import demo

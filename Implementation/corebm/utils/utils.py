@@ -27,7 +27,7 @@ def task2name(task: str) -> str:
         `str`: The full name of the task.
     """
     if task == 'pr':
-        return 'Reviewer Recommendation'
+        return 'CoReBM'
     else:
         raise ValueError(f'Task {task} is not supported.')
 

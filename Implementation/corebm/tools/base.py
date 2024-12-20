@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from Implementation.corebm import read_json
+from corebm.utils import read_json
 
 class Tool(ABC):
     def __init__(self, config_path: str, *args, **kwargs) -> None:

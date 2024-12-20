@@ -5,7 +5,7 @@ from typing import Any
 from transformers import pipeline
 from transformers.pipelines import Pipeline
 
-from Implementation.corebm.llms.basellm import BaseLLM
+from corebm.llms.basellm import BaseLLM
 
 class MyJsonFormer:
     """

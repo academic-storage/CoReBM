@@ -3,9 +3,9 @@ from loguru import logger
 from transformers import AutoTokenizer
 from langchain.prompts import PromptTemplate
 
-from Implementation.corebm.agents.base import Agent
-from Implementation.corebm import AnyOpenAILLM
-from Implementation.corebm import format_step, run_once
+from corebm.agents.base import Agent
+from corebm.llms import AnyOpenAILLM
+from corebm.utils import format_step, run_once
 
 class Manager(Agent):
     """

@@ -1,9 +1,9 @@
 from typing import Any
 from loguru import logger
 
-from Implementation.corebm.agents.base import ToolAgent
-from Implementation.corebm import InfoDatabase, InteractionRetriever
-from Implementation.corebm import read_json, get_rm
+from corebm.agents.base import ToolAgent
+from corebm.tools import InfoDatabase, InteractionRetriever
+from corebm.utils import read_json, get_rm
 
 class Evaluator(ToolAgent):
     def __init__(self, config_path: str, *args, **kwargs) -> None:

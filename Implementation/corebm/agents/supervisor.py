@@ -5,9 +5,9 @@ from loguru import logger
 from transformers import AutoTokenizer
 from langchain.prompts import PromptTemplate
 
-from Implementation.corebm.agents.base import Agent
-from Implementation.corebm import AnyOpenAILLM
-from Implementation.corebm import format_step, format_supervisions, read_json, get_rm
+from corebm.agents.base import Agent
+from corebm.llms import AnyOpenAILLM
+from corebm.utils import format_step, format_supervisions, read_json, get_rm
 
 class Supervisor(Agent):
     """

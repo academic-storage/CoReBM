@@ -67,6 +67,7 @@ def process_interaction_data(data_df: pd.DataFrame, n_neg_reviewer: int, user_pr
             out_df.loc[index_out] = [row['PR_id'], row['changeId'], row['submit_date'], row['submit_time'], grant_date, to_timestamp(grant_date), int(reviewer['accountId']), reviewer['name'], to_timestamp(grant_date) - row['submit_time'], row['files'], row['project_parent'], row['project'], row['subject'], row['owner']['name'], row['owner']['accountId'], row['code_diff']]
             index_out += 1
 
+    out_df['files'] = out_df['files'].astype(str)
     # temporary storage out_df
     # out_df.to_csv(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'corebm', 'temp', 'out.csv'))
 
@@ -156,7 +157,7 @@ def process_pr_data(out_df: pd.DataFrame, user_profile_df: pd.DataFrame) -> pd.D
 
 
 
-def process_data(dir: str, n_neg_pr: int = 9):
+def corebm_process_data(dir: str, n_neg_pr: int = 9):
     """Process the amazon raw data and output the processed data to `dir`.
 
     Args:
@@ -211,4 +212,4 @@ def process_data(dir: str, n_neg_pr: int = 9):
 
 
 if __name__ == "__main__":
-    process_data(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'corebm'), 6)
+    corebm_process_data(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'corebm'), 6)

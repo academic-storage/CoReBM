@@ -5,8 +5,8 @@ from typing import Any, Optional
 from loguru import logger
 from langchain.prompts import PromptTemplate
 
-from Implementation.corebm import Agent
-from Implementation.corebm import is_correct, init_answer, read_json, read_prompts, get_avatar, get_color, get_role
+from corebm.agents import Agent
+from corebm.utils import is_correct, init_answer, read_json, read_prompts, get_avatar, get_color, get_role
 
 class System(ABC):
     """

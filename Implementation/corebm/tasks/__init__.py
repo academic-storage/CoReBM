@@ -1,2 +1,3 @@
 # Description: all tasks are defined here
-from Implementation.corebm import EvaluateTask
+from corebm.tasks.evaluate import EvaluateTask
+from corebm.tasks.preprocess import PreprocessTask
