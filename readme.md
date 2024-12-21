@@ -78,6 +78,10 @@ We’ve provided a demo video to show how the proposed method works on webpage.
 
 Video demo: [https://drive.google.com](https://drive.google.com/file/d/1PlVxi0RuWgpFWksKUCL4uUyrL5sTxbbk/view?usp=sharing)
 
+
+https://github.com/user-attachments/assets/83e933df-0343-4718-a868-0da183482c53
+
+
 ## Gender and Race/Ethnicity Tools
 
 ### Overview
