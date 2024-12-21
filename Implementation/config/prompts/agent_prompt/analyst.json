@@ -1,10 +1,10 @@
 {
     "analyst_prompt": {
         "type": "template",
-        "content": ""
+        "content": "I want you to act as an analyst and help me analyze the given Pull Request {id} for the reviewer recommendation task. You will be given a PR's information. First analyze the characteristics of the PR based on the information. The analysis should consider the PR's project name, subject, file path, and contributor information. Then summarize the information and your analysis. Let's think step by step.\nDon't use title in markdown grammar. Instead, you can use a line break.\n\nHere are some examples:\n{fewshot}\n(END OF EXAMPLES)\n\nRemember the reviewer id is {id}.\n\n{history}\n\nAnalysis: "
     },
     "analyst_fewshot": {
         "type": "raw",
-        "content": ""
+        "content": "The pullrequest ** involves ... The project ... The subject indicates that ... The files modified ... The contributor ... Overall, ..."
     }
 }

@@ -1,22 +1,18 @@
 {
     "hallucination_analyse_prompt_json": {
         "type": "template",
-        "content": ""
+        "content": "You are an advanced reasoning agent specialized in identifying the \"hallucination\" phenomenon in a reasoning process. You will be provided with a previous reasoning process that primarily analyzes information about PullRequest. Your task is to:\n1. Analyse characteristics of the PR based on provided information. The analysis should consider the PR's project name, subject, file path, and contributor information.\n2. Summarize the information and your analysis.\n3. Compare the previous analysis and your analysis, and determine whether any hallucinations (false or fabricated information) were produced at previous analysis.\n4. Provide detailed reasons for your judgment, citing specific parts of the reasoning process.\n\nProvide result in following JSON format: {{\"type\": correctness, \"content\": detail}}\nLet's think step by step.\n\nHallucination examples:\n{examples}\n(END OF EXAMPLES)\n\nReasoning process:\n{history}\n\nHallucination:"
     },
     "hallucination_evaluate_prompt_json": {
         "type": "template",
-        "content": ""
-    },
-    "hallucination_retrieve_prompt_json": {
-        "type": "template",
-        "content": ""
+        "content": "You are an advanced reasoning agent specialized in identifying the \"hallucination\" phenomenon in a reasoning process. You will be provided with a previous reasoning process that primarily analyzes information about Reviewer. Your task is to:\n1. Evaluate the reviewer based on provided information and history. Considering Expertise, Efficiency, Workload and reviewer information.\n2. Summarize the information and your evaluation.\n3. Compare the previous evaluation and your evaluation, and determine whether any hallucinations (false or fabricated information) were produced at previous evaluation.\n4. Provide detailed reasons for your judgment, citing specific parts of the reasoning process.\n\nProvide result in following JSON format: {{\"type\": correctness, \"content\": detail}}\nLet's think step by step.\n\nHallucination examples:\n{examples}\n(END OF EXAMPLES)\n\nReasoning process:\n{history}\n\nHallucination:"
     },
     "hallucination_examples": {
         "type": "raw",
-        "content": ""
+        "content": "false[\"There is no problem with the previous reasoning ...\"]\ntrue[\"The hallucination comes from ...\"]"
     },
     "hallucination_examples_json": {
         "type": "raw",
-        "content": ""
+        "content": "{\"type\": false, \"content\": \"There is no problem with the previous reasoning ...\"}\n{\"type\": true, \"content\": \"The hallucination comes from ...\"}"
     }
 }

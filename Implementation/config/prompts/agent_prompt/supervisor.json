@@ -1,14 +1,14 @@
 {
     "supervisor_prompt_json": {
         "type": "template",
-        "content": ""
+        "content": "You are a Supervisor responsible for verifying the reasoning process and recommendation results of a code reviewer recommendation system. You will be provided with a complete reasoning process and a list of recommended reviewers sorted by their recommendation level. Your task is in 3 steps:\n1. According provided reasoning process, generate another recommend ranking. Consider the following factors:\n\ta) Expertise: The expertise of the reviewer should match the field of PR.\n\tb) Efficiency: It's better if reviewer's history review duration is shorter.\n\tc) FaR (File at Risk): Avoid recommending the same few reviewers to a large number of PRs to ensure balanced distribution and exposure.\n\td) Workload: Better consider reviewers who work less over a period of time.\n\te) Equality and Diversity: Better to recommend women and minorities.\n2. Check if your results are consistent with each reviewer of the given results. If it's consistent, the correctness will be true. If not, correctness will be fase.\n3. Provide the reason why it's correct or incorrect. If correctness is false, you should identify every potential issues in the previous process and create a new, explicit plan to avoid the same problem.\nLet's think step by step. Result should be in JSON format.\n\nValid supervision example:\n{examples}\n\nInput:\n{input}\n\nPrevious reasoning process:\n{scratchpad}\n\nSupervision:"
     },
     "supervisor_examples_json": {
         "type": "raw",
-        "content": ""
+        "content": "{\"correctness\": false, \"reason\": \"The problem ...\", \"new_plan\": \"new plan\"}\n{\"correctness\": true, \"reason\": \"There is no problem with ...\"}"
     },
     "supervise_header": {
         "type": "raw",
-        "content": ""
+        "content": "You have attempted to complete a following task before. The following reflection(s) give a new plan to complete the task in the same way you did previously. Use them to improve your strategy of correctly completing the given task.\n"
     }
 }

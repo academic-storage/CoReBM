@@ -1,10 +1,10 @@
 {
     "evaluator_prompt": {
         "type": "template",
-        "content": ""
+        "content": "I want you to act as an evaluator and help me evaluate the given reviewer {id} for the reviewer recommendation task. You will be given a reviewer's information and review history. First evaluate the reviewer considering the aspects bellow. Then summarize the information and your evaluation. Let's think step by step.\n1. Expertise: Identify the projects, subjects and files the reviewer has worked on.\n2. Efficiency: Assess the duration taken by the reviewer to complete their reviews.\n3. Workload: Analyze the dates on which the reviews were conducted.\n4. Reviewer information: Illustrate the gender and race of the reviewer. Note that the specific gender and ethnicity information has been removed and cannot be inferred; only gender and ethnicity codes are provided.\n\nHere are some examples:\n{fewshot}\n(END OF EXAMPLES)\n\nRemember the reviewer id is {id}.\n\n{history}\n\nEvaluation: "
     },
     "evaluator_fewshot": {
         "type": "raw",
-        "content": ""
+        "content": "The reviewer ** engaged in ... In terms of expertise, ... Regarding efficiency, ... When analyzing the workload, ... The gender and race of reviewer is ... Overall, ..."
     }
 }

@@ -1,11 +1,11 @@
 {
   "manager_thought_prompt": {
     "type": "template",
-    "content": ""
+    "content": "To solve a code reviewer recommendation task, follow a structured approach with interleaving Thought and Action steps, with a final Supervise step. The Thought step involves reasoning about the current situation, while the Action step uses specific instructions to interact with other agents. When recommendation result is generated, it comes to Supervise step, which check the correctness of recommendation result.\nThe recommendation task should be based on the details of the Pull Request (PR), generate a ranked order of the candidate reviewers. The ranking should comprehensively consider the following factors:\n1. Expertise: The expertise of the reviewer should match the field of PR.\n2. Efficiency: It's better if reviewer's history review duration is shorter.\n3. FaR (File at Risk): Avoid recommending the same few reviewers to a large number of PRs to ensure balanced distribution and exposure.\n4. Workload: Better consider reviewers who work less over a period of time.\n5. Equality and Diversity: Please slightly increase the rank of recommendations for women and minority groups, but keep the overall balance of the recommendations intact without affecting the first ranked reviewer in the recommendation list.\n\nNow comes the Thought step. First analyse the previous reasoning process, then think about what to do next. Let's think step by step.\n\nPlease output only one line.\nYou can take at most {max_step} steps.\nValid thought examples:\n{examples}\n(END OF EXAMPLES)\n\n{supervisions}\n\nInput:\n{input}\n{scratchpad}"
   },
   "manager_action_prompt": {
     "type": "template",
-    "content": ""
+    "content": "To solve a code reviewer recommendation task, follow a structured approach with interleaving Thought and Action steps, with a final Supervise step. The Thought step involves reasoning about the current situation, while the Action step uses specific instructions to interact with other agents. When recommendation result is generated, it comes to Supervise step, which check the correctness of recommendation result.\nThe recommendation task should be based on the details of the Pull Request (PR), generate a ranked order of the candidate reviewers. The ranking should comprehensively consider the following factors:\n1. Expertise: The expertise of the reviewer should match the field of PR.\n2. Efficiency: It's better if reviewer's history review duration is shorter.\n3. FaR (File at Risk): Avoid recommending the same few reviewers to a large number of PRs to ensure balanced distribution and exposure.\n4. Workload: Better consider reviewers who work less over a period of time.\n5. Equality and Diversity: Please slightly increase the rank of recommendations for women and minority groups, but keep the overall balance of the recommendations intact without affecting the first ranked reviewer in the recommendation list.\n\nNow comes the Action step. Action can be 4 types in JSON format:\n(1) {{\"type\": \"Analyse\", \"content\": [\"pullrequest\", id]}}, which will ask another agent (called CodeAnalyst) to help analyse the information of a pullrequest.\n(2) {{\"type\": \"Evaluate\", \"content\": [\"reviewer\", id]}}, which will ask another agent (called ReviewerEvaluator) to help evaluate the information and history interactions of a reviewer.\n(3) {{\"type\": \"Retrieve\", \"content\": requirements}}, which will ask another agent (called DataRetriever) to help retrieve the given requirements from internet.\n(4) {{\"type\": \"Finish\", \"content\": result}}, which finishes the task and returns the recommendation result to the user. The result should be a list of all candidate reviewers, including reviewers who has no review history.\n\nEvery action should be used.\nYou can take at most {max_step} steps.\nValid action examples:\n{examples}\n(END OF EXAMPLES)\n\n{supervisions}\n\nInput:\n{input}\n{scratchpad}"
   },
   "hint": {
     "type": "raw",
@@ -13,10 +13,10 @@
   },
   "valid_thought_example": {
     "type": "raw",
-    "content": ""
+    "content": "Now we have analysed ... The next step should involve ..."
   },
   "valid_action_example": {
     "type": "raw",
-    "content": ""
+    "content": "{\"type\": \"Analyse\", \"content\": [\"pullrequest\", 524]}\n{\"type\": \"Evaluate\", \"content\": [\"reviewer\", 955]}\n{\"type\": \"Retrieve\", \"content\": \"platform/base\"}\n{\"type\": \"Finish\", \"content\": {finish}}"
   }
 }
