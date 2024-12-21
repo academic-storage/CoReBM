@@ -47,6 +47,8 @@ You can also download it here: [https://drive.google.com](https://drive.google.c
 
 To use this method, you need to set up the Large Language Model's API by specifying the API URL and Key. Please enter your API information in `config/api-config.json`.
 
+**For your convenience, we've provided an API Key, but please note that its availability is not guaranteed.**
+
 ### 5. Running the Proposed Method
 
 #### Run With Command Line

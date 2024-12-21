@@ -1,4 +1,4 @@
 {
-    "api_base": "https://XXX",
-    "api_key": "sk_XXXX"
+    "api_base": "https://openrouter.ai/api/v1",
+    "api_key": "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"
 }
