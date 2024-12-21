@@ -1,12 +1,12 @@
 # CoReBM: A Code Reviewer Recommendation Method
 
 ## Introduction
-This document is included in "***Building Bridges, Not Walls: Fairness-aware and Accurate Recommendation of Code Reviewers via LLM-based Agents Collaboration***“. We first collected a dataset from 4 large-scale open-source projects involving 50-month revision history, reaching up to 30 attributes. This dataset includes gender and racial/ethnic information, which was inferred, validated, and incorporated to enable comprehensive data bias analysis in reviewer recommendation tasks. Additionally, we introduce a fairness-aware and accurate LLM-based approach: CoReBM, which integrates diverse factors to improve recommendation performance while mitigating bias effects through the incorporation of candidates' gender and racial/ethnic attributes.
+This document is included in "***Building Bridges, Not Walls: Fairness-aware and Accurate Recommendation of Code Reviewers via LLM-based Agents Collaboration***". We first collected a dataset from 4 large-scale open-source projects involving 50-month revision history, reaching up to 30 attributes. This dataset includes gender and racial/ethnic information, which was inferred, validated, and incorporated to enable comprehensive data bias analysis in reviewer recommendation tasks. Additionally, we introduce a fairness-aware and accurate LLM-based approach: CoReBM, which integrates diverse factors to improve recommendation performance while mitigating bias effects through the incorporation of candidates' gender and racial/ethnic attributes.
 
 ## General of Packages
-- Baseline: Baseline method.
+- Baseline: Reproduction of baseline method.
 - Dataset: Dataset used in CoReBM.
-- Implementation: Implementation of CoReBM.
+- Implementation: Source code of CoReBM.
 - Tool: Prediction tools of gender and race/ethnicity.
 
 ## Usage Guide
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ### 3. Dataset Preparation
 
-We have two forms of data: raw data and usable datasets. The raw data consists of entries crawled from a website, while the usable datasets are derived from the raw data and processed into a format that can be used by the proposed method. Both of them can be downloaded from shared link.
+We have two forms of data: raw data and usable datasets. The raw data consists of entries crawled from **Gerrit**, while the usable datasets are derived from the raw data and processed into a format that can be used by the proposed method. Both of them can be downloaded from shared link.
 
 #### 3.1 Raw Data
 Due to GitHub's limitations, we have not yet uploaded the raw data to the repository. Please download the dataset here: [https://drive.google.com](https://drive.google.com/file/d/11JfeGkVqb4M3zKSJEWSw3iZ9bFIqWyrJ/view?usp=sharing)
@@ -47,9 +47,9 @@ You can also download it here: [https://drive.google.com](https://drive.google.c
 
 To use this method, you need to set up the Large Language Model's API by specifying the API URL and Key. Please enter your API information in `config/api-config.json`.
 
-**For your convenience, we've provided an API Key, but please note that its availability is not guaranteed.**
+**For your convenience, we provide an API Key. However, due to budget constraints, we cannot guarantee that it will be available for use by everyone.**
 
-### 5. Running the Proposed Method
+### 5. Running the CoReBM
 
 #### Run With Command Line
 
@@ -72,9 +72,7 @@ Usage Steps
 - Step 2: Enter the maximum number of rounds for the recommendation task in the number input box at the bottom of the page.
 - Step 3: Click the 'Start one round' button to begin.
 
-Currently, our system supports generating recommendation results using existing datasets. In future updates, we will introduce an interactive user interface that enables users to input details of new code changes and receive personalized code reviewer suggestions.
-
-## Case
+## Demo
 
 We’ve provided a demo video to show how the proposed method works on webpage.
 
@@ -87,6 +85,8 @@ https://github.com/user-attachments/assets/83e933df-0343-4718-a868-0da183482c53
 ## Gender and Race/Ethnicity Tools
 
 ### Overview
+
+Below is an overview of the tools we use for gender and race/ethnicity prediction.
 
 |                          Tool Name                           |      Description      |      Type      | # Output Category |
 | :----------------------------------------------------------: | :-------------------: | :------------: | :---------------: |
@@ -103,6 +103,10 @@ https://github.com/user-attachments/assets/83e933df-0343-4718-a868-0da183482c53
 
 ### Output Categories
 
+We have presented the output categories for each tool and demonstrated how they correlate with the classifications in CoReBM.
+
 ![Gender](./assets/Gender.png)
 
 ![RaceEthnicity](./assets/RaceEthnicity.png)
+
+If you have any questions or need further assistance, feel free to reach out to us. We're happy to help and would love to discuss any issues or concerns you may have.
